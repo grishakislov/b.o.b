@@ -1,0 +1,30 @@
+
+To use SUPLOAD to upload Super Mario World type "SUPLOAD S"
+
+The file "S" is an upload script to allow the upload software to
+load the Sluggo III memory with the requested files. It contains a list
+of filenames or hex addresses to load a file. 
+
+Example of a script.
+
+~2000
+FILE2000
+~4000
+FILE4000
+FILENEXT
+^Z
+
+Every address is preceded by a "~" symbol followed by a hexadecimal address.
+All other lines must contain a valid MS-DOS filename of a file to upload. If
+there is no address between filenames then the subsequent file is appended
+to the previous file in Sluggo III memory. FILE2000 is loaded at 02000H,
+FILE4000 is loaded at 04000H and FILENEXT immediately follows FILE4000. Files
+can be uploaded in any order. Separate scripts can be made to upload data 
+and/or code separately to help speed up the upload time. The ^Z denotes an
+end of file, not an ASCII "^" and a "Z".
+
+
+Any questions, call in the evenings Bill Heineman (213)-695-3966 or Steve
+Parsons (818)-966-5538
+
+
